@@ -15,22 +15,40 @@ package Main;
 
 public class Gamescore{
 	// TODO: Fields...
-	public class Score{
-			private int x;
+			private int score;
 	// TODO: Constructor...
-			public int Gamescore(int startScore){
-				this.x = startScore;
+			public Gamescore(int startScore){
+				this.score = startScore;
 				}
 	// TODO: Methods...
-			public int getScore{
-				return startScore;
+			public int getScore(){
+				 return score;
 			}
+			
+			public void increaseScore(int amt){
+				score += amt;
 			}
+			
+			public void decreaseScore(int amt){
+				score -= amt;
+			}  
+			
+			public void resetScore(){
+				score = 0;
+			}    
+			
+			public void setScore(int value){
+				score = value;
+			}
+			
+			public String toString(){
+				return "Score: " + score;
+			}  
+	}
 	
 	
 
-		}
-	
+		
 	
 	
 	
