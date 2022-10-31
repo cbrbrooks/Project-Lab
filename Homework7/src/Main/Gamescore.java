@@ -42,7 +42,7 @@ public class Gamescore{
 			}
 			
 			public String toString(){
-				return "Score: " + score;
+				return ("Score: " + score);
 			}  
 	}
 	
