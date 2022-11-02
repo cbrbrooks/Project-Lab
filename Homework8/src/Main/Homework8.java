@@ -15,7 +15,8 @@ public class Homework8{
 		// Feel free to use the p() method to print text instead of System.out.println()
 		
 		// TODO: Write file data...
-		
+		public EZFileWrite(String);
+		EZFileWrite ezw = new EZFileWrite(“testwrite.txt”);
 		
 		// TODO: Read file data in and display...
 		
