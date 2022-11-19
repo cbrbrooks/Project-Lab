@@ -15,9 +15,40 @@ public class Homework8{
 		// Feel free to use the p() method to print text instead of System.out.println()
 		
 		// TODO: Write file data...
-		public EZFileWrite(String);
-		EZFileWrite ezw = new EZFileWrite(“testwrite.txt”);
+		//public EZFileWrite(String);
+		EZFileWrite ezw = new EZFileWrite("testwrite.txt");
 		
+		int n = 5;
+			
+		for (int i=1; i <=n; i++){
+			ezw.writeLine("Test Line #"+i);
+		}
+		ezw.saveFile();
+		
+		
+		EZFileRead ezr = new EZFileRead("testwrite.txt");
+		
+		
+		for (int i=0; i <n; i++){
+			System.out.println(ezr.getLine(i));
+		}
+		
+		EZFileWrite eza = new EZFileWrite("testwrite2.txt");
+		for (int i = 0; i <= n; i++){
+			eza.writeLine(ezr.getLine(i));
+			eza.saveFile();
+		}
+		int b = 3;
+		for (int i=1; i <=b; i++){
+			eza.writeLine("Append Line #"+b);
+		}
+		
+		eza.saveFile();
+		
+		EZFileRead ezr2 = new EZFileRead("testwrite2.txt");
+		for(int i=1; i <=n; i++){
+			System.out.println(ezr.getLine(i));
+		}
 		// TODO: Read file data in and display...
 		
 		
