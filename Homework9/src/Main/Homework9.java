@@ -22,22 +22,26 @@ public class Homework9{
 	}
 	
 	public static String getUnsignedIntString(int value){
-		String ret = "";
+
 		if(value > 0){
-			return ret;
+			return Integer.toString(value);
 		}else if(value <=0){
-			return Integer.toString(0);
+			return "0";
 		}
-		return ret;
+		return Integer.toString(value);
 	}
 	
 	public static String getArrayElement(int[] a, int index){
 		String ret = "";
-		for (int i = 0; i < a.length-1; i++){
-			 if(a[i] == index)
-	               index = a[i]; 
-		} return ret;
-		
+
+		for (int i = 0; i < a.length;i++){
+			if(a[i] == index){
+	              return a.toString();
+
+			 }else
+				 return "Out of Bounds";
+		}
+		return ret;
 	}
 	
 	public static int getMaxValue(int[] a){
@@ -50,13 +54,16 @@ public class Homework9{
 	}
 	
 	public static String divide(int v1, int v2){
-		String ret ="" ;
+		String ret= "";
 		try{
-			v2=0;
-		}catch(ArithmeticException ae){
-			System.out.println("Undefined");
-		}
+			Integer.toString(v1/v2);
+		}catch(ArithmeticException e){
+			return "Undefined";
+		} 
 		return ret;
+				
+		
+		
 	}
 	
 	public static String twoSum(int[] a, int sum){
