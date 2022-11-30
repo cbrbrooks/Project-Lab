@@ -22,21 +22,33 @@ public class Homework10{
 		// TODO: Write your code to load the text file into memory, parse it, and display the data in a meaningful way...
 		// (Use the instructions in the hand out to complete the assignment for full credit)
 		
-		String[] movies= new String[5];
+		String[] movies= new String[efw.getNumLines()];
 		int[] years= new int[5];
 		String[] stars= new String[5];
 		float[] runtimes= new float[5];
+
+		efw.toString();
 		
- 	for(int i = 0; i < movies.length; i++){
-			String raw = " ";
+		
+		/*for(String raw = efw.getNumLines(); raw != null; raw = raw.getNumLines()){
+			String raw = File.ReadAllLines(parse.txt);
+			raw = Interger.toString;
 			StringTokenizer st = new StringTokenizer(raw,"*");
-		} 
+		} */
+		
+		int i=0;
+		StringTokenizer st=new StringTokenizer(raw,"|");
+		while (st.hasMoreTokens())
+		{
+		ar[i]=st.nextToken();
+		i++;
+		}
 
 		
 		
-		/*String[] tokens = new String[2];
-		tokens[0] = st.nextToken();
-		tokens[1] = st.nextToken();
-		float movies = Float.parseFloat(tokens[1]); */
+		
+		//String[] tokens = new String[2]; //String array
+		//tokens[1] = st.nextToken();
+		//float movies = Float.parseFloat(tokens[1]); 
 	} 
 }
