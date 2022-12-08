@@ -18,37 +18,51 @@ public class Homework10{
 		efw.saveFile();
 		
 		// End of test
-	
+		
 		// TODO: Write your code to load the text file into memory, parse it, and display the data in a meaningful way...
 		// (Use the instructions in the hand out to complete the assignment for full credit)
 		
-		String[] movies= new String[efw.getNumLines()];
-		int[] years= new int[5];
-		String[] stars= new String[5];
-		float[] runtimes= new float[5];
-
-		efw.toString();
+		
+		EZFileRead efz = new EZFileRead("parse.txt");
+		int n = efz.getNumLines();
+		String r = efz.getLine(n);
 		
 		
-		/*for(String raw = efw.getNumLines(); raw != null; raw = raw.getNumLines()){
-			String raw = File.ReadAllLines(parse.txt);
-			raw = Interger.toString;
-			StringTokenizer st = new StringTokenizer(raw,"*");
-		} */
 		
-		int i=0;
-		StringTokenizer st=new StringTokenizer(raw,"|");
-		while (st.hasMoreTokens())
-		{
-		ar[i]=st.nextToken();
-		i++;
+		
+		String[] movies= new String[n];
+		int years[]= new int[n];
+		String stars[]= new String[n];
+		float runtimes[]= new float[n];
+	
+		
+		
+		for(int i=0; i<n;i++){
+			String raw = efz.getLine(i);
+			StringTokenizer st = new StringTokenizer(raw ,"*");
+			movies[i] = st.nextToken();
+			years[i] = Integer.parseInt(st.nextToken());
+			stars[i] = st.nextToken();
+			runtimes[i] = Float.parseFloat(st.nextToken());
+		} 
+	System.out.println("-----MOVIES-----");
+		for(int i=0; i<n; i++){
+			System.out.println(movies[i]);
 		}
-
+	System.out.println("-----YEARS-----");
 		
-		
-		
-		//String[] tokens = new String[2]; //String array
-		//tokens[1] = st.nextToken();
-		//float movies = Float.parseFloat(tokens[1]); 
-	} 
+		for(int i=0; i<n; i++){
+			System.out.println(years[i]);
+		}
+	System.out.println("-----STARS-----");
+		for(int i=0; i<n; i++){
+			System.out.println(stars[i]);
+	}
+	System.out.println("-----RUNTIMES-----");
+		for(int i=0; i<n; i++){
+			System.out.println(runtimes[i]);
 }
+}
+}	
+		
+
