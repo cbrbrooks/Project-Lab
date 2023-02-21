@@ -1,1 +1,1 @@
-This includes labs done in CSC 15 with Professor Philips :)
+This includes labs done in CSC 15 & 20 with Professor Philips :)
